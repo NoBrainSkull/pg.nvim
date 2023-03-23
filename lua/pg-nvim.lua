@@ -109,7 +109,7 @@ local function connect_buffer()
 end
 
 local function test()
-	files = get_connection_files(settings.state_dir, settings)
+	local files = get_connection_files(settings.state_dir, settings)
 	print('heu there, ', vim.inspect(files))
 end
 
