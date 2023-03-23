@@ -147,5 +147,5 @@ return {
   RunQuery = run_query,
   EnterBuffer = enter_buffer,
   OnSplitClose = on_split_close,
-  RunTest = test,
+  RunTest = print_connection_map,
 }
