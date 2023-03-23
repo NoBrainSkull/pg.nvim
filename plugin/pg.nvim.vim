@@ -11,6 +11,7 @@ function EnterBuffer()
 endfunction
 
 " Run our plugin
+command! PGTest lua require 'pg-nvim'.Test()
 command! PGConnectBuffer lua require 'pg-nvim'.ConnectBuffer()
 command! PGPrintConnMap lua require 'pg-nvim'.PrintConnMap()
 command! PGOnWindowClosed lua require 'pg-nvim'.OnSplitClose()
