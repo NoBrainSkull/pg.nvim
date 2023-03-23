@@ -29,6 +29,8 @@ local function load_plain_file(path)
 end
 
 local function load_file(path, settings)
+	print('path:', vim.inspect(path))
+	print('settings:', vim.inspect(settings))
 	local file_text = load_encrypted_file(path, settings)
 	local status, connection_data = pcall(function()
 		return json.decode(file_text)
