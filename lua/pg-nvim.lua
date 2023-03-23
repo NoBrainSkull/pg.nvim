@@ -110,11 +110,6 @@ local function connect_buffer()
   menu:on(event.BufLeave, menu.menu_props.on_close, { once = true })]]--
 end
 
-local function test()
-	local files = get_connection_files(settings.state_dir, settings)
-	print('heu there, ', vim.inspect(files))
-end
-
 local function print_connection_map()
   print('Connection Map', vim.inspect(connection_map))
 end
@@ -149,5 +144,4 @@ return {
   RunQuery = run_query,
   EnterBuffer = enter_buffer,
   OnSplitClose = on_split_close,
-  RunTest = test,
 }
