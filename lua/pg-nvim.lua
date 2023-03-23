@@ -54,14 +54,16 @@ local function connect_buffer()
   local current_buffer = vim.api.nvim_get_current_buf()
   local current_win = vim.api.nvim_get_current_win()
 
-	print("hello there general kenobi")
+	print('start')
   local conn_files = get_connection_files(settings.state_dir, settings)
+	print('files :', vim.inspect(conn_files) )
 
   local menu_lines = {}
   for f in pairs(conn_files) do
     local file = conn_files[f]
     table.insert(menu_lines, Menu.item(file.name, file))
   end
+	print('menu_lines :', vim.inspect(menu_lines) )
 
   local menu = Menu(popup_options, {
     lines = menu_lines,
