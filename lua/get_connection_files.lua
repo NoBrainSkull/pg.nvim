@@ -57,6 +57,7 @@ local function get_connection_files(state_dir, settings)
 	for i, _ in pairs(files) do
 		local file = files[i]
 		local connection_settings = load_file(file, settings)
+		print(vim.inspect(connection_settings))
 		table.insert(connection_files, connection_settings)
 	end
 	print(vim.inspect(files))
