@@ -65,7 +65,7 @@ local function connect_buffer()
   end
 	print('menu_lines :', vim.inspect(menu_lines) )
 
-  local menu = Menu(popup_options, {
+	--[[ local menu = Menu(popup_options, {
     lines = menu_lines,
     max_width = 20,
     keymap = {
@@ -107,7 +107,7 @@ local function connect_buffer()
   })
 
   menu:mount()
-  menu:on(event.BufLeave, menu.menu_props.on_close, { once = true })
+  menu:on(event.BufLeave, menu.menu_props.on_close, { once = true })]]--
 end
 
 local function test()
