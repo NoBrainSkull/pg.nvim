@@ -54,6 +54,8 @@ end
 local function get_connection_files(state_dir, settings)
   local connection_files = {}
   local files = scandir.scan_dir(state_dir, { add_dirs=false })
+	print(vim.inspect(connection_files))
+	print(vim.inspect(files))
   for i, _ in pairs(files) do
     local file = files[i]
     local connection_settings = load_file(file, settings)
