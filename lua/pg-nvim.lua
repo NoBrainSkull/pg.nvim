@@ -54,6 +54,7 @@ local function connect_buffer()
   local current_buffer = vim.api.nvim_get_current_buf()
   local current_win = vim.api.nvim_get_current_win()
 
+	print("hello there general kenobi")
   local conn_files = get_connection_files(settings.state_dir, settings)
 
   local menu_lines = {}
